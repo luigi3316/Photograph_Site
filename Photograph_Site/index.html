@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css\style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+    <title>VisualCaptionDesigner-VCD</title>
+</head>
+<body>
+
+  <!--navbar-->
+  <nav>
+    <!--Images-->
+    <img class="picture" src="img/LogoPicture.jpg" alt="votre navigateur ne prend pas en compte le format de l'image">
+    <!--Nom-->
+    <div class="logo">VisualCaptionDesigner</div>
+    <!--3 barre du menu-->
+    <input type="checkbox" id="checkbox">
+    <label for="checkbox" id="icon">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </label>
+
+    <!--lien de navbar -->
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#">Project</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+  </nav>
+  <!--fin de la navbar-->
+
+  <!--Carrousel-->
+  <div class="container">
+
+    <input type="radio" name="slider" id="item-1" checked>
+    <input type="radio" name="slider" id="item-2">
+    <input type="radio" name="slider" id="item-3">
+
+    <div class="cards">
+      <label class="card" for="item-1" id="song-1">
+        <img src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80" alt="song">
+      </label>
+
+      <label class="card" for="item-2" id="song-2">
+        <img src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80" alt="song">
+      </label>
+
+      <label class="card" for="item-3" id="song-3">
+        <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="song">
+      </label>
+    </div>
+
+  </div>
+  <!--fin du carrousel-->
+
+</body>
+</html>

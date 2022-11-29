@@ -1,0 +1,259 @@
+/*reset*/
+/*----------------------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*----------------------------------------------------------------------------------------------*/
+
+body {
+  height: 100vh;
+  background: #000000;
+  font-family: "inter", sans-serif;
+}
+
+.whoiam{
+  margin-top: 5%;
+  margin-left: 5%;
+  border: #FFFFFF 2px solid;
+  border-radius: 10px;
+  width: 25%;
+  height: 40%;
+}
+
+.title{
+  color: #FFF;
+  margin-top: 5%;
+  margin-left: 5%;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 7%;
+  align-items: center;
+  background: #f1f1f1;
+}
+
+.logo {
+  color: #000000;
+  font-size: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #8291A5;
+  padding: 8px 20px;
+  border-radius: 7px;
+  transition: all .3s ease;
+}
+
+ul li a:hover,
+ul li a.active {
+  color: #FFF;
+  background: #000000;
+}
+
+#icon {
+  background-color: #000000;
+  padding: 5px 7px 3px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+#icon svg {
+  color: #FFF;
+  height: 28px;
+  transition: all .3s ease;
+}
+
+#icon:hover {
+  background: #FFF;
+}
+
+#icon:hover svg {
+  color: #0075FF;
+}
+
+#checkbox,
+#icon {
+  display: none;
+}
+
+.picture{
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+      border-bottom: 1px solid #455468;
+  }
+
+  ul {
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 71px);
+      background-color: #18283B;
+      left: 0;
+      top: 0;
+      text-align: center;
+      display: none;
+      margin-top: 71px;
+  }
+
+  ul li {
+      display: block;
+      padding: 10px 15px;
+  }
+
+  ul li a {
+      display: block;
+      padding: 10px 0;
+  }
+
+  #icon {
+      display: block;
+  }
+
+  #checkbox:checked~ul {
+      display: block;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .picture{
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 7%;
+    align-items: center;
+    background: #f1f1f1;
+  }
+  
+}
+
+@media screen and (max-width: 300px){
+  .logo{
+    font-size: 15px
+  }
+}
+
+/*Fin navbar*/
+/*----------------------------------------------------------------------------------------------*/
+
+/*carrousel*/
+input[type=radio] {
+  display: none;  
+}
+
+.card {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  transition: transform .4s ease;
+  cursor: pointer;
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  max-height: 600px;
+  height: 80%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center ;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.cards {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
+  transform: translatex(-40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
+  transform: translatex(40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
